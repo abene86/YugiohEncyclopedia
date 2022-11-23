@@ -8,13 +8,11 @@
 
 * **Student Name: Abenezer Gebeyehu** 
 * **Student G-Number: G01281469** 
-* **Heroku Deployment URL: https://yugiohdragonencyopedia.herokuapp.com/**
+* **Heroku Deployment URL: https://yugiohencyopedia.herokuapp.com/**
 
 ### Documentation of your Web App and React Components
 
-*Here please describe your (at least) 3 different React components as well as the overall purpose of your web application. We provide an example below of what we expect this documentation to look like.*
-
-**General App Description:** Yugioh is monster card franchise that have very beautiful and aesthetically pleasing cards. This web Application allows users to examine and appreciet Dragon cards by searching its name. It allows provides all the name of possible Dragon cards to aid in the exploration.
+**General App Description:** Yugioh is monster card franchise, which has created multiple generation, that have very beautiful and aesthetically pleasing cards. This web Application allows users to fully imerse in the world of duel monsters by allowing them to examine and read a specific card, be exposed to multiple card designs, and finally interact with unique villians and hero from certain generation and add on to their dilogue tree.
 
 * **Endpoint 1:** Retrieve ALl the Dragon Cards
   * API Endpoint: GET /allCardNames
@@ -27,15 +25,42 @@
   * Expected Output: [{"id":3366982,"image_url":"https://images.ygoprodeck.com/images/cards/3366982.jpg","image_url_small":"https://images.ygoprodeck.com/images/cards_small/3366982.jpg"}]
 
 * **Component 1:** Examine Component
-	* API Endpoint(s):
+  * Purpose: Allows user to search for Dragon Card Name and display the image and meta data of the card
+  * Note/Comment: The name of each card must be capitalized and must be correct spell out or server will throw not found 404
+  * Here are sample name to making testing easier more can be found:https://yugiohdragonencyopedia.herokuapp.com/
+  * Ancient Fairy Dragon
+  * Ancient Pixie Dragon
+  * Anesthrokket Dragon
+  *  Anotherverse Dragon
+  *  Arc Rebellion Xyz Dragon
+  * Archfiend Black Skull Dragon
+  * Archnemeses Eschatos
+  *  Arkbrave Dragon
+  * Armed Dragon LV10
+  *  Armed Dragon LV10 White
+  *  Armed Dragon LV3
+  *  Armed Dragon LV5
+  *  Armed Dragon LV7
+  * Helper: It uses two special Components DisplayImage and DisplayCardInformation
+* **Component 2:**DisplayCardImage:
+  * API Endpoint(s):
   		* Get /Image/:nameCard
-  * Purpose: Allows user to search for Dragon Card using Image Component it displays the image that is stored in firebase
-* **Component 2:** Image Component
-  * Purpose: It takes the url of image through props and display the card image
-* **Component 3:** All Cards Component
+  * Purpose: it fetches card image using  prop.name and formats and display the image.
+* **Component 3:**DisplayCardInformation:
+  * API Endpoint(s):
+  		* Get /CardInformation/:nameCard
+  * Purpose: it fetches the meta data of the card and display it in a list
+* **Component 4:** All Cards Component
 	* API Endpoint(s):
   		* GET /allCardNames
-  * Purpose: Display all the card names
+  * Purpose: it fetches all card names and using grid layout display the image like it placed in a binder beautifully and using button generate the next batch of images
+  * **Component 5:** TitleBanner
+  * Purpose: it display the title of yugioh from each generation and with mouse hover it does a special animation
+  * 
+  * **Component 6:** CharacterSlider
+  * Purpose: It shows famous character from yugioh universe and allows users to play around with the dialogue tree
+  * 
+
 
 
 
