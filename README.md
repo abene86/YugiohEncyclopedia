@@ -54,10 +54,10 @@
 	* API Endpoint(s):
   		* GET /allCardNames
   * Purpose: it fetches all card names and using grid layout display the image like it placed in a binder beautifully and using button generate the next batch of images
-  * **Component 5:** TitleBanner
+* **Component 5:** TitleBanner
   * Purpose: it display the title of yugioh from each generation and with mouse hover it does a special animation
   * 
-  * **Component 6:** CharacterSlider
+* **Component 6:** CharacterSlider
   * Purpose: It shows famous character from yugioh universe and allows users to play around with the dialogue tree
   * 
 
