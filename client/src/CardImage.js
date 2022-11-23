@@ -6,7 +6,9 @@ function DisplayCardImage(props) {
         .then(res => res.json())
         .then(cardInformation => {
             setUrl(cardInformation[0].image_url);
-        })
+        }).catch((error) => {
+            console.log(error);
+        });
    
     return (
         <div className='containerCardImage'>

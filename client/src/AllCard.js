@@ -7,12 +7,16 @@ function AllCardNames(){
     const[cardNames, setCardArray]=useState([]);
     const[indexStart, setStartIndex]=useState(0)
     const[indexEnd, setEndIndex]=useState(15);
-
-    fetch('/allCardNames')
-    .then(res => res.json())
-    .then(cardInformation => {
-      setCardArray(cardInformation);
-    });
+    useEffect(()=>{
+      fetch('/allCardNames')
+      .then(res => res.json())
+      .then(cardInformation => {
+        setCardArray(cardInformation);
+      }).catch((error) => {
+        console.log(error);
+      });
+    }, [])
+  
 
     function upDateIndex(){
       if(indexStart >= 0 && indexStart <=600 && indexEnd >=0 && indexEnd <=600){
@@ -34,7 +38,6 @@ function AllCardNames(){
                 Look More Cards
               </button>
             </div>
-
           </div>
         );    
 

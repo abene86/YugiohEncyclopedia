@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import DisplayCardImage from './CardImage'
+import DisplayCardInformation from './DisplayCardInformation.js';
+
 //Examine allows the users to search  for a card name and like the name implies examine or look 
 // What the card looks like and its informations using helper component Image to Display
 function Examine() {
@@ -21,6 +23,7 @@ function Examine() {
                     <button onClick={handleOnClick}>Examine Card</button>
                     <div className='OutPut'>
                     <DisplayCardImage name={userInput} size={400} />
+                    <DisplayCardInformation name={userInput}/>
                 </div>
                 </div>
             </div>
@@ -37,6 +40,7 @@ function Examine() {
                     <button onClick={handleOnClick}>Examine Card</button>
                     <div className='OutPut'>
                         <DisplayCardImage name={prevUserInput} size={400} />
+                        <DisplayCardInformation name={prevUserInput}/>
                     </div>
                 </div>
             </div>
