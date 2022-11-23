@@ -2,7 +2,15 @@ import React, {useState, useEffect} from 'react'
 import DisplayCardImage from './CardImage';
 import  TitleBanners from './TiltleChangingBanners';
 
-//it fetchs all cards and display it in a list
+//it fetchs all cards name and display in a unique index list
+//but instead of being word and letters
+//it uses a helper component that takes in cardname  and display
+//to show all the images
+//A very cool feature inside here is inorder to make most out of the given space I usedd adding index
+// to limit the number of cards on screen and making changing it produce new ones easier.
+//I also proud to show another component above the image output called TitleBanner
+//which changes andd show all the yugioh generation titles.
+//for more information look at titleChangingBanner.js
 function AllCardNames(){
     const[cardNames, setCardArray]=useState([]);
     const[indexStart, setStartIndex]=useState(0)

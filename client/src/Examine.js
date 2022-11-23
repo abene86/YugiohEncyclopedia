@@ -3,7 +3,8 @@ import DisplayCardImage from './CardImage'
 import DisplayCardInformation from './DisplayCardInformation.js';
 
 //Examine allows the users to search  for a card name and like the name implies examine or look 
-// What the card looks like and its informations using helper component Image to Display
+//at the meta data of card and its image it use two helper components DisplayCardImage
+//and DisplayCardInformation
 function Examine() {
     const [userInput, setUserInput] = useState("Bystial Baldrake");
     const [prevUserInput, setPreviousInput] = useState("Bystial Baldrake");

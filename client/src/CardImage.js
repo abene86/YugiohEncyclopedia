@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-//It takes an image url through props and display it
+//It take the cardName and fetchs it and display its image
 function DisplayCardImage(props) {
     const [url, setUrl] = useState('https://images.ygoprodeck.com/images/cards/88305705.jpg');
         fetch(`Image/${props.name} `)

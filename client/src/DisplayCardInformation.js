@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+//It is very similar to display cardImage but instead of images it display card information
 function DisplayCardInformation(props) {
     const [information, setResult] = useState(null);
     useEffect(() => {
@@ -9,7 +10,7 @@ function DisplayCardInformation(props) {
             }).catch((error) => {
                 console.log(error);
             });
-    }, [information])
+    }, [information, props.name])
     if (information !== null) {
         return (
             <div>
