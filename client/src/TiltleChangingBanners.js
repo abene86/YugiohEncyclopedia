@@ -7,23 +7,23 @@ import yugiohGx from './Image/yugiohGX.png'
 //It does that using setState and SetEffect hooks
 //There is a suprise to any user who hover their mouse over the title
 function TitleBanners() {
-  const [seconds, setSeconds] = useState(0);
+  const [index, setIndex] = useState(0);
   const[image, setImage]=useState(yugio);
   const images =[yugio, yugioh5D, yugiohDarkSide, yugiohGx];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if(seconds === images.length-1){
-        setSeconds(0);
+      if(index === images.length-1){
+        setIndex(0);
       }else{
-        setSeconds(seconds+1)
+        setIndex(index+1)
       }
     }, 60000);
-  }, [seconds]);
+  }, [index]);
 
   return (
     <div className="TitleBanner">
-      <img width="400px" src={images[seconds]}/>
+      <img width="400px" src={images[index]}/>
     </div>
   );
 }

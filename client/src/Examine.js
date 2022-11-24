@@ -6,8 +6,8 @@ import DisplayCardInformation from './DisplayCardInformation.js';
 //at the meta data of card and its image it use two helper components DisplayCardImage
 //and DisplayCardInformation
 function Examine() {
-    const [userInput, setUserInput] = useState("Bystial Baldrake");
-    const [prevUserInput, setPreviousInput] = useState("Bystial Baldrake");
+    const [userInput, setUserInput] = useState("Blue-Eyes White Dragon");
+    const [prevUserInput, setPreviousInput] = useState("Blue-Eyes White Dragon");
     const [needdisplay, setDisplay] = useState(false)
     function handleOnClick() {
         setDisplay(true)
